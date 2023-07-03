@@ -28,3 +28,15 @@ def inputTime(name):
             continue;
     return value;
 
+def inputDate(name):
+    value = datetime.now()
+    while True:
+        try:
+            valueInput = input("Nhap ngay %s : " % name)
+            value =  datetime.strptime(valueInput, "%d/%m/%Y");
+            break;
+        except:
+            print("Vui long nhap thoi gian dung dinh dang dd/mm/yyyy");
+            continue;
+    return value;
+
